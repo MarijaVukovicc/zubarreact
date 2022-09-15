@@ -2,13 +2,22 @@ import './App.css';
 import Footer from './komponente/Footer';
 import NavBar from './komponente/NavBar';
 import Pocetna from './komponente/Pocetna';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Kontakt from './komponente/Kontakt';
 
 function App() {
   return (
     <div>
-    <NavBar></NavBar>
-    <Pocetna></Pocetna>
-     <Footer></Footer>
+      <BrowserRouter>
+        <NavBar></NavBar>
+        <Routes>
+            <Route path="/" element={<Pocetna></Pocetna>} />
+            <Route path="/kontakt" element={<Kontakt></Kontakt>} />
+
+        </Routes>
+        
+        <Footer></Footer>
+     </BrowserRouter>
     </div>
   );
 }
