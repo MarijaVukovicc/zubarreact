@@ -7,7 +7,8 @@ function NavBar() {
         <div className="topnav">
           <Link to="/">Pocetna</Link>
           <Link to="/kontakt">Kontakt</Link>
-          
+          <Link to="/usluge">Usluge</Link>
+
         </div>
     </div>
   )
