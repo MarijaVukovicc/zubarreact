@@ -8,6 +8,7 @@ function NavBar() {
           <Link to="/">Pocetna</Link>
           <Link to="/kontakt">Kontakt</Link>
           <Link to="/usluge">Usluge</Link>
+          <Link to="/zainteresovan">Dodate usluge</Link>
 
         </div>
     </div>

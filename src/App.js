@@ -6,12 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Kontakt from './komponente/Kontakt';
 import Usluge from './komponente/Usluge';
 import { useState } from "react";
+import Zainteresovan from './komponente/Zainteresovan';
 
 function App() {
-  const [brojZaineresovan, setBrZain] = useState(0);
+  const [brojZainteresovan, setBrZain] = useState(0);
  
   const [usluge] = useState([
-  
+
   {
     id:1,
     naziv:"Ciscenje korena",
@@ -82,7 +83,15 @@ function App() {
   }, 
 ]);
 
-
+function dodajZain(id){
+  usluge.forEach((u)=>{
+    if(u.id===id){
+      u.omiljena=1;
+      setBrZain(brojZainteresovan+1)
+      
+    }
+  })
+}
   return (
 
     
@@ -92,8 +101,8 @@ function App() {
         <Routes>
             <Route path="/" element={<Pocetna></Pocetna>} />
             <Route path="/kontakt" element={<Kontakt></Kontakt>} />
-            <Route path="/usluge" element={<Usluge usluge={usluge}></Usluge>} />
-            
+            <Route path="/usluge" element={<Usluge usluge={usluge} dodajZain={dodajZain}></Usluge>} />
+            <Route path="/zainteresovan" element={<Zainteresovan zainteresovan={usluge} brojZain = {brojZainteresovan}></Zainteresovan>} />
         </Routes>
       
         <Footer></Footer>
