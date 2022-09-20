@@ -8,7 +8,7 @@ function UslugaKartica({ usluga, dodajZain, mod, izbaciZain}) {
 
         <h1>{usluga.naziv}</h1>
         <p className="price">{usluga.cena}</p>
-        {mod == 1 ?
+        {mod === 1 ?
           <p><button onClick={() => dodajZain(usluga.id)}>Zainteresovan/-a sam</button></p>
           :
           <p><button onClick={() => izbaciZain(usluga.id)}>Nisam vise zainteresovan/-a</button></p>
