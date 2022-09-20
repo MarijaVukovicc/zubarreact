@@ -86,7 +86,7 @@ function App() {
 function dodajZain(id){
   usluge.forEach((u)=>{
     if(u.id===id){
-      u.omiljena=1;
+      u.zainteresovan=1;
       setBrZain(brojZainteresovan+1)
       
     }
