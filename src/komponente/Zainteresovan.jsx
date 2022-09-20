@@ -1,7 +1,7 @@
 import React from 'react'
 import UslugaKartica from './UslugaKartica';
 
-function Zainteresovan({zainteresovan, brojZain}) {
+function Zainteresovan({zainteresovan, brojZain, izbaciZain}) {
   return (
     <div className='sveUsluge'>
 
@@ -17,7 +17,8 @@ function Zainteresovan({zainteresovan, brojZain}) {
        
           {zainteresovan
             .filter((z)=>z.zainteresovan===1)
-            .map((z)=>(<UslugaKartica key={z.id} zainteresovan={z}></UslugaKartica>))}
+            
+            .map((z)=>(<UslugaKartica key={z.id} usluga={z} mod={0} izbaciZain={izbaciZain}></UslugaKartica>))}
             
         </>
         }
