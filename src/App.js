@@ -84,12 +84,10 @@ function App() {
   ]);
 
   function dodajZain(id) {
-
     niz.forEach((u) => {
       if (u.id === id) {
         u.zainteresovan = 1;
         setBrZain(brojZainteresovan + 1)
-
       }
     })
   }
@@ -100,13 +98,10 @@ function App() {
       if (u.id === id) {
         u.zainteresovan = 0;
         setBrZain(brojZainteresovan - 1)
-
       }
     })
   }
   return (
-
-
     <div>
       <BrowserRouter>
         <NavBar></NavBar>

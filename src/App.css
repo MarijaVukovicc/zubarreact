@@ -18,6 +18,7 @@ html,body {
   position: relative;
   height: auto;
   background-color: #070617;
+
 }
 .footer .col {
   width: 190px;
@@ -231,6 +232,7 @@ body, html {
   margin: auto;
   text-align: center;
   font-family: arial;
+  
 }
 
 .price {
@@ -254,19 +256,23 @@ body, html {
   opacity: 0.7;
 }
 
+
+
+
 .sveUsluge{
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-top: 5px;
-
+ 
+  padding-top: 5%;
    margin-left: 9%;
    margin-right:9%;
-   margin-top: 0;
+   margin-top: 100;
    justify-content: space-between;
 }
 
-/*
+
 .search{
   margin-top: 2%;
   margin-left: 60%;
@@ -275,4 +281,3 @@ body, html {
   width: 500px;
   height: 30px;
 }
-*/
